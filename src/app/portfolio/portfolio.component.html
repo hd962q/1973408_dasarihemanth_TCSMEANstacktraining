@@ -1,0 +1,26 @@
+<div>
+    <h2>My Portfolio</h2>
+     <p>Welcome</p>
+     <form [formGroup]="loginRef" (ngSubmit)="save()">
+     <label>Contact Name</label>
+     <input type="text" formControlName="fname" #CName><br/>
+     <label>Phone Number</label>
+     <input type="tel" formControlName="number" #PNumber><br/>
+     <input type="submit" value="save">
+     <table class="table table-bordered">
+        <thead>
+          <tr>
+      <th *ngFor = "let column of headers">
+            {{column}}
+      </th>
+          </tr>
+      </thead>
+      <tr *ngFor = "let row of rows">
+          <td *ngFor = "let column of headers">
+            {{row[column]}}
+          </td>
+      </tr>
+      </table>
+    </form> 
+
+</div>
